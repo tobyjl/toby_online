@@ -1,82 +1,3 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ExternalLink, FileText, Moon, Sun } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
-const PROFILE = {
-  name: "Toby Lowe",
-  role: "Data Scientist / Analyst",
-  tagline: "MSc Data Science (AMBS) • Data Analyst @ E.ON Next • Building ML + analytics that ship",
-  location: "Manchester, UK",
-  email: "youremail@example.com",         // ← swap
-  github: "https://github.com/yourhandle", // ← swap
-  linkedin: "https://www.linkedin.com/in/yourhandle/", // ← swap
-  resumeUrl: "#",                          // ← upload a PDF and paste link
-};
-
-const PROJECTS = [
-  {
-    title: "Driver Drowsiness Detection",
-    blurb:
-      "End-to-end ML pipeline: CNN eye-state + temporal features + XGBoost. Real-time PyQt5 dashboard with TTS alerts.",
-    tech: ["PyTorch", "Albumentations", "XGBoost", "PyQt5", "OpenCV"],
-    link: "https://github.com/yourhandle/drowsiness-detection",
-  },
-  {
-    title: "PAYG Demand Handover System",
-    blurb:
-      "Ops analytics automation: Athena SQL → Google Sheets → Tableau + Slack notifications. Cut manual effort by 70%.",
-    tech: ["Python", "AWS Athena", "Tableau", "Apps Script"],
-    link: "https://github.com/yourhandle/payg-demand-handover",
-  },
-  {
-    title: "Survey Analytics & Reproducible Prov",
-    blurb:
-      "Cleaned + modelled survey data with provenance graph, snake_case schema, and reproducible notebooks.",
-    tech: ["Pandas", "SQL", "Mermaid", "Jupyter"],
-    link: "https://github.com/yourhandle/survey-analytics",
-  },
-];
-
-const SKILLS = {
-  Languages: ["Python", "SQL", "R", "JavaScript"],
-  ML: ["PyTorch", "scikit-learn", "XGBoost", "SHAP"],
-  Data: ["Pandas", "Polars", "dbt", "Athena", "Postgres"],
-  BI: ["Tableau", "Power BI", "Looker", "Google Sheets"],
-  Ops: ["Git", "Docker", "CI/CD", "Linters & Testing"],
-};
-
-const EXPERIENCE = [
-  {
-    org: "E.ON Next",
-    role: "Data Analyst (Smart PAYG / Disputes)",
-    time: "2023 – Present",
-    points: [
-      "Built analytics automations and dashboards used in operations (repeat demand, PAYG).",
-      "Partnered with engineering on backend/data opportunities; delivered measurable process savings.",
-    ],
-  },
-  {
-    org: "Alliance Manchester Business School",
-    role: "MSc Data Science (with Business & Management)",
-    time: "2024 – 2025",
-    points: [
-      "Projects in ML, optimisation, and data engineering with industry-aligned deliverables.",
-      "Research focus on applied computer vision & human-centric ML.",
-    ],
-  },
-  {
-    org: "Nottingham Trent University",
-    role: "BSc (Hons) Data Science – First Class",
-    time: "2021 – 2024",
-    points: [
-      "Dissertation: Driver Drowsiness Detection (CNN + temporal features + XGBoost).",
-      "Coursework across statistics, ML, data viz, databases, and software engineering.",
-    ],
-  },
-];
-
 export default function Tech() {
   const [dark, setDark] = useState(true);
 
@@ -217,8 +138,10 @@ export default function Tech() {
         <footer id="contact" className="mt-16 border-t border-black/5 dark:border-white/10">
           <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
-              <div className="font-semibold">Open to roles in the North West</div>
-              <div className="text-sm opacity-80">Reach out — let's talk data that moves the needle.</div>
+              <div className="font-semibold">Portfolio & selected work</div>
+              <div className="text-sm opacity-80">
+                A snapshot of projects, skills, and experience in data and analytics.
+              </div>
             </div>
             <div className="flex items-center gap-3">
               <a href={`mailto:${PROFILE.email}`} className="opacity-90 hover:opacity-100">
